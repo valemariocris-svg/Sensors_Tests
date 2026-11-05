@@ -1,0 +1,30 @@
+# Cartelle di compilazione e output dell'IDE di Arduino
+/build/
+/sketch/build/
+/core/
+.arduino/
+*.build/
+
+# Escludi la cartella delle librerie locali
+/libraries/
+
+# File binari e di compilazione generati
+*.hex
+*.bin
+*.elf
+*.map
+*.hex
+*.bin
+*.o
+*.a
+
+# Se usi configurazioni di VS Code / PlatformIO
+.vscode/
+.pio/
+.history/
+
+# File di sistema operativo
+.DS_Store
+Thumbs.db
+*~
+*.swp
