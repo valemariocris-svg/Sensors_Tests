@@ -297,59 +297,6 @@ void Read_CO2_Measure() {
 //     }
 }
 
-// /* -------------------------------------------------------------------------------------------------------------------- */
-// void leggiEStampaTestFiltro() {
-    
-//     EEPROM.begin(EEPROM_SIZE);
-//     // Preleva l'intero array dalla EEPROM dall'indirizzo 0
-//     EEPROM.get(0, buffer_co2);
-//     EEPROM.end();
-
-//     // --- A. Calcolo Min, Max, Media ---
-//     uint32_t somma = 0;
-//     uint16_t min_co2 = buffer_co2[0];
-//     uint16_t max_co2 = buffer_co2[0];
-
-//     for (int i = 0; i < TOT_SAMPLES; i++) {
-//         somma += buffer_co2[i];
-//         if (buffer_co2[i] < min_co2) min_co2 = buffer_co2[i];
-//         if (buffer_co2[i] > max_co2) max_co2 = buffer_co2[i];
-//     }
-//     float media = (float)somma / TOT_SAMPLES;
-
-//     Serial.println("\n========================================");
-//     Serial.println("       ANALISI DATI LETTI DA EEPROM     ");
-//     Serial.println("========================================");
-//     Serial.print("Valore Minimo : "); Serial.println(min_co2);
-//     Serial.print("Valore Massimo : "); Serial.println(max_co2);
-//     Serial.print("Valore Medio   : "); Serial.println(media, 1);
-//     Serial.println("----------------------------------------");
-
-//     // --- B. Test del Filtro a Media Mobile Esponenziale (EMA) ---
-//     // NOTA: Puoi modificare questo coefficiente alpha (da 0.05 a 0.8) 
-//     // e riavviare/ricalibrare per vedere subito l'andamento sul Monitor Seriale!
-//     float alpha = 0.2f; 
-//     // float co2_filtrata = buffer_co2[0]; // Inizializziamo il filtro con il primo campione
-    
-//     float co2_filtrata = 605.0;
-//     Serial.println("Indice |  Grezzo (ppm)  |  Filtrato (ppm)");
-//     Serial.println("----------------------------------------");
-//     for (int i = 0; i < TOT_SAMPLES; i++) {
-//         // Formula del filtro EMA: y[k] = alpha * x[k] + (1 - alpha) * y[k-1]
-//         co2_filtrata = (alpha * buffer_co2[i]) + ((1.0f - alpha) * co2_filtrata);
-
-//         // Stampa tabulare per un controllo visivo immediato
-//         Serial.print("  ");
-//         if (i < 10) Serial.print("0");
-//         Serial.print(i);
-//         Serial.print("   |      ");
-//         Serial.print(buffer_co2[i]);
-//         Serial.print("     |      ");
-//         Serial.println(co2_filtrata, 1);
-//     }
-//     Serial.println("========================================\n");
-// }
-
 
 /* -------------------------------------------------------------------------------------------------------------------- */
 // void save_samples_InEeprom() {
