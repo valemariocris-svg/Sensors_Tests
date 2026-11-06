@@ -297,21 +297,3 @@ void Read_CO2_Measure() {
 //     }
 }
 
-
-/* -------------------------------------------------------------------------------------------------------------------- */
-// void save_samples_InEeprom() {
-//     EEPROM.begin(EEPROM_SIZE);
-
-//     // Salva l'intero array buffer_co2 a partire dall'indirizzo 0 della EEPROM
-//     EEPROM.put(0, buffer_co2);
-
-//     // Su ESP32 il commit è obbligatorio per scrivere realmente i dati in Flash
-//     if (EEPROM.commit()) {
-//         Serial.println("\n[EEPROM] salvate le misure nella memoria persistente!");
-//     } else {
-//         Serial.println("\n[EEPROM] ERRORE: Scrittura EEPROM fallita!");
-//     }
-    
-//     EEPROM.end();
-// }
-/* -------------------------------------------------------------------------------------------------------------------- */
